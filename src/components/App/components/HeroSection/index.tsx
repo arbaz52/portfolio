@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => (
           as="a"
           target="_blank"
           download
-          href="/Resume - Arbaz Ajaz.pdf"
+          href="/portfolio/Resume - Arbaz Ajaz.pdf"
         >
           Download My Resume
         </Button>
