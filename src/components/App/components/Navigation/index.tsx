@@ -1,8 +1,17 @@
 import Icon from "components/Icon";
 import { IconLink } from "components/SocialLinks/styled.components";
 import React from "react";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 import { NavigationWrapper } from "./styled.components";
 
+// const LINKS = [
+//   {
+//     title: "",
+//     href: "",
+//     icon: "",
+//     iconVariant: ""
+//   }
+// ]
 const Navigation: React.FC = () => {
   const handleClick = React.useCallback(
     (ev: React.MouseEvent<HTMLAnchorElement>) => {
@@ -54,6 +63,9 @@ const Navigation: React.FC = () => {
       <IconLink onClick={handleClick} title="Get In Touch" href="#contact">
         <Icon icon="mail" variant="stroke" color="white" />
       </IconLink>
+      <span></span>
+
+      <ThemeSwitcher />
     </NavigationWrapper>
   );
 };
