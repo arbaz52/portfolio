@@ -31,14 +31,28 @@ const MySkillsAndExpertiseSection: React.FC = () => {
             </Box>
           </div>
           <div>
-            <Box
-              icon={<Icon icon="code" variant="stroke" />}
-              title="Develop Websites"
-            >
+            <Box title="HTML5, CSS3, Javascript">
               <Typography variant="secondary">
-                Choosing a framework/platform mostly depends on two things, the
-                target client is trying to achieve with the website and client’s
-                technical know-how.
+                I have developed over 2 dozen websites with and without
+                frameworks.
+              </Typography>
+            </Box>
+          </div>
+        </BoxesWrapper>
+        <BoxesWrapper>
+          <div>
+            <Box title="Figma and Adobe XD">
+              <Typography variant="secondary">
+                I have been using Figma for over 6 months now for{" "}
+                <b>designing user interfaces</b> and to manipulate SVGs
+              </Typography>
+            </Box>
+          </div>
+          <div>
+            <Box title="Wordpress">
+              <Typography variant="secondary">
+                During my career as a freelancer, I designed and developed
+                E-commerce websites and landing pages using wordpress.
               </Typography>
             </Box>
           </div>
