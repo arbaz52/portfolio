@@ -15,7 +15,7 @@ const MySkillsAndExpertiseSection: React.FC = () => {
       <ContentWrapper>
         <TextWrapper>
           <h5>My Skills and Expertise</h5>
-          <Typography variant="highlighted" lead>
+          <Typography variant="body" lead>
             I started coding when I was in 10th grade, it has been 7 years since
             and I still get excited when I learn or use something new.
           </Typography>

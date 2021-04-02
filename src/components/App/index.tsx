@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import WhatIDoSection from "./components/WhatIDoSection";
+import ProjectsGallerySection from "./components/ProjectsGallerySection";
 
 import ThemeContext from "contexts/ThemeContext";
 
@@ -33,6 +34,7 @@ const App: React.FC = () => {
         <AboutSection />
         <WhatIDoSection />
         <MySkillsAndExpertiseSection />
+        <ProjectsGallerySection />
       </ThemeProvider>
     </ThemeContext.Provider>
   );
