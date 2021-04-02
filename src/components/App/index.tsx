@@ -15,6 +15,7 @@ import { TTheme } from "contexts/ThemeContext/types";
 
 import { CSSReset, Headings } from "./styled.components";
 import MySkillsAndExpertiseSection from "./components/MySkillsAndExpertiseSection";
+import LetsGetInTouchSection from "./components/LetsGetInTouchSection";
 
 const App: React.FC = () => {
   const [theme, toggleTheme] = React.useReducer(
@@ -35,6 +36,7 @@ const App: React.FC = () => {
         <WhatIDoSection />
         <MySkillsAndExpertiseSection />
         <ProjectsGallerySection />
+        <LetsGetInTouchSection />
       </ThemeProvider>
     </ThemeContext.Provider>
   );
