@@ -22,7 +22,11 @@ const ProjectsGallerySection: React.FC = () => {
         <TextWrapper>
           <h5>Projects Gallery</h5>
           <Typography variant="body" lead>
-            Some projects I have recently designed.
+            Some projects I have recently designed. Checkout the rest of the
+            projects I have worked on on{" "}
+            <Typography variant="accent" as="a" href="https://github.com/arbaz52">
+              Github
+            </Typography>
           </Typography>
         </TextWrapper>
         <BoxesWrapper>
