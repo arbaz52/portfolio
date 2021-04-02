@@ -16,6 +16,7 @@ export const lightTheme: ITheme = {
   colors: {
     accent: "#EE5B84",
     background: "#FEF7F9",
+    backgroundHighlighted: "#000000",
     icon: "#757575",
     secondaryText: "#757575",
     text: "#000000",
@@ -27,6 +28,7 @@ export const darkTheme: ITheme = {
   colors: {
     accent: "#EE5B84",
     background: "#202020",
+    backgroundHighlighted: "#000000",
     icon: "#757575",
     secondaryText: "#757575",
     text: "#FFFFFF",
