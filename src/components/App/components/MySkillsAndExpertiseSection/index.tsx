@@ -1,5 +1,4 @@
 import Box from "components/Box";
-import Icon from "components/Icon";
 import Typography from "components/Typography";
 import React from "react";
 
@@ -8,7 +7,7 @@ import {
   ContentWrapper,
   Section,
   TextWrapper,
-} from "./styled.components";
+} from "../WhatIDoSection/styled.components";
 
 const MySkillsAndExpertiseSection: React.FC = () => {
   return (
