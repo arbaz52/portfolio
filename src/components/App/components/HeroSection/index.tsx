@@ -24,15 +24,31 @@ const HeroSection: React.FC = () => (
         UI/UX Designer
       </h1>
       <ButtonsWrapper>
-        <Button prefix="chat-bubbles">Let's Talk</Button>
-        <Button prefix="download" variation="outlined">
+        <Button
+          prefix="chat-bubbles"
+          as="a"
+          href="https://www.linkedin.com/in/arbaz-ajaz/"
+          target="_blank"
+        >
+          Let's Talk
+        </Button>
+        <Button
+          prefix="download"
+          variation="outlined"
+          as="a"
+          target="_blank"
+          download
+          href="/Resume - Arbaz Ajaz.pdf"
+        >
           Download My Resume
         </Button>
       </ButtonsWrapper>
     </ContentWrapper>
     <South>
       <SocialLinks />
-      <Button prefix="arrow-down" variation="plain">Scroll to see more</Button>
+      <Button prefix="arrow-down" variation="plain">
+        Scroll to see more
+      </Button>
     </South>
   </Section>
 );

@@ -7,3 +7,5 @@ export const SocialLinksWrapper = styled.div`
   gap: 32px;
   padding: 8px;
 `;
+
+export const IconLink = styled.a``;

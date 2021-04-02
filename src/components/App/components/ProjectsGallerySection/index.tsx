@@ -13,6 +13,7 @@ import {
 } from "../WhatIDoSection/styled.components";
 import { BoxContentWrapper, Box, IconsWrapper } from "./styled.components";
 import Icon from "components/Icon";
+import { IconLink } from "components/SocialLinks/styled.components";
 
 const ProjectsGallerySection: React.FC = () => {
   return (
@@ -33,7 +34,12 @@ const ProjectsGallerySection: React.FC = () => {
                   A note keeping app design using figma.
                 </Typography>
                 <IconsWrapper>
-                  <Icon icon="figma" variant="stroke" />
+                  <IconLink
+                    target="_blank"
+                    href="https://www.figma.com/file/bqzsYDStp4e6bYW5sVhKen/notta.?node-id=0%3A1"
+                  >
+                    <Icon icon="figma" variant="stroke" />
+                  </IconLink>
                 </IconsWrapper>
               </BoxContentWrapper>
             </Box>
@@ -46,8 +52,19 @@ const ProjectsGallerySection: React.FC = () => {
                   Task assigned during hiring process by XGrid.
                 </Typography>
                 <IconsWrapper>
-                  <Icon icon="figma" variant="stroke" />
-                  <Icon icon="github" variant="stroke" />
+                  <IconLink
+                    target="_blank"
+                    href="https://www.figma.com/file/wTUYPJ5kAnotTTfzvo2MKj/Flight-Planner?node-id=0%3A1"
+                  >
+                    <Icon icon="figma" variant="stroke" />
+                  </IconLink>
+
+                  <IconLink
+                    target="_blank"
+                    href="https://github.com/arbaz52/planearly"
+                  >
+                    <Icon icon="github" variant="stroke" />
+                  </IconLink>
                 </IconsWrapper>
               </BoxContentWrapper>
             </Box>

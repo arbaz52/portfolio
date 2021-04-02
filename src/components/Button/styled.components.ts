@@ -9,6 +9,7 @@ export const Button = styled.button<IButtonProps>`
   cursor: pointer;
   border-radius: 8px;
   font-weight: 400;
+  text-decoration: none;
   letter-spacing: 2px;
   /* text-transform: uppercase; */
   border: 1px solid transparent;
