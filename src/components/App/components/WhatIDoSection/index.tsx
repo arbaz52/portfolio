@@ -26,7 +26,7 @@ const WhatIDoSection: React.FC = () => {
             <Typography variant="secondary">
               I use Figma for designing, I do my research, look for fonts and
               colors that my client loves and are appreciated by the industry
-              the client’s website is targetting.
+              the client’s website is targeting.
             </Typography>
           </Box>
           <Box
