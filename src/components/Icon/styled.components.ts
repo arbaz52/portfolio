@@ -10,13 +10,21 @@ export const Icon = styled(Svg)<IIconProps>`
       switch (props.variant) {
         case "stroke":
           return `
-            stroke: ${props.color || props.theme.colors.icon};
+            stroke: ${
+              props.highlighted
+                ? props.theme.colors.text
+                : props.theme.colors.icon
+            };
           `;
 
         case "fill":
         default:
           return `
-            fill: ${props.color || props.theme.colors.icon};
+            fill: ${
+              props.highlighted
+                ? props.theme.colors.text
+                : props.theme.colors.icon
+            };
           `;
       }
     }}

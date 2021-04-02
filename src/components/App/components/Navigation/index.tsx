@@ -33,35 +33,35 @@ const Navigation: React.FC = () => {
   return (
     <NavigationWrapper>
       <IconLink onClick={handleClick} title="Hero" href="#hero">
-        <Icon icon="tv" variant="stroke" color="white" />
+        <Icon icon="tv" variant="stroke" highlighted />
       </IconLink>
 
       <IconLink onClick={handleClick} title="About" href="#about">
-        <Icon icon="person" variant="stroke" color="white" />
+        <Icon icon="person" variant="stroke" highlighted />
       </IconLink>
 
       <IconLink onClick={handleClick} title="Work" href="#work">
-        <Icon icon="briefcase" variant="stroke" color="white" />
+        <Icon icon="briefcase" variant="stroke" highlighted />
       </IconLink>
 
       <IconLink onClick={handleClick} title="Using" href="#using">
-        <Icon icon="heart" variant="stroke" color="white" />
+        <Icon icon="heart" variant="stroke" highlighted />
       </IconLink>
 
       <IconLink onClick={handleClick} title="Skills" href="#skills">
-        <Icon icon="zap" variant="stroke" color="white" />
+        <Icon icon="zap" variant="stroke" highlighted />
       </IconLink>
 
       <IconLink onClick={handleClick} title="Projects Gallery" href="#gallery">
-        <Icon icon="camera" variant="stroke" color="white" />
+        <Icon icon="camera" variant="stroke" highlighted />
       </IconLink>
 
       <IconLink onClick={handleClick} title="Numbers" href="#relatable">
-        <Icon icon="hashtag" variant="stroke" color="white" />
+        <Icon icon="hashtag" variant="stroke" highlighted />
       </IconLink>
 
       <IconLink onClick={handleClick} title="Get In Touch" href="#contact">
-        <Icon icon="mail" variant="stroke" color="white" />
+        <Icon icon="mail" variant="stroke" highlighted />
       </IconLink>
       <span></span>
 

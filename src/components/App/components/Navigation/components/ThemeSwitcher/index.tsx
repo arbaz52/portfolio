@@ -6,11 +6,11 @@ import ThemeContext from "contexts/ThemeContext";
 const ThemeSwitcher: React.FC = () => {
   const { theme, toggleTheme } = React.useContext(ThemeContext);
   return (
-    <span onClick={toggleTheme}>
+    <span style={{ cursor: "pointer" }} onClick={toggleTheme}>
       <Icon
         icon={theme === "Dark" ? "moon" : "sun"}
         variant="stroke"
-        color="white"
+        highlighted
       />
     </span>
   );

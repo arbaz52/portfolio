@@ -16,11 +16,11 @@ export const lightTheme: ITheme = {
   colors: {
     accent: "#EE5B84",
     background: "#FEF7F9",
-    backgroundHighlighted: "#000000",
+    backgroundHighlighted: "#FBD6E0",
     icon: "#757575",
     secondaryText: "#757575",
     text: "#000000",
-    bodyText: "#B6B6B6",
+    bodyText: "#6B6B6B",
   },
 };
 

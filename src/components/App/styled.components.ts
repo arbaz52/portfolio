@@ -88,7 +88,7 @@ export const Stripe = styled.div`
   padding: 70px 0;
   min-height: 400px;
 
-  background: black;
+  background: ${(props) => props.theme.colors.backgroundHighlighted};
 `;
 
 export const IconWithText = styled.div`

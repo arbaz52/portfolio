@@ -7,7 +7,7 @@ import { ContentWrapper } from "./styled.components";
 const WhatIUseStrip: React.FC = () => (
   <Stripe id="using">
     <IconWithText>
-      <Icon icon="heart" variant="stroke" color="white" />
+      <Icon icon="heart" variant="stroke" highlighted />
       <h5>Platforms, Languages and Framework</h5>
     </IconWithText>
     <ContentWrapper>

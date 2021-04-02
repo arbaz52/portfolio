@@ -7,7 +7,7 @@ import { ContentWrapper, TitleWithNumber } from "./styled.components";
 const RelatableContentStrip: React.FC = () => (
   <Stripe id="relatable">
     <IconWithText>
-      <Icon icon="hashtag" variant="stroke" color="white" />
+      <Icon icon="hashtag" variant="stroke" highlighted />
       <h5>Relatable Content.</h5>
     </IconWithText>
     <ContentWrapper>

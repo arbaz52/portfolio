@@ -13,7 +13,7 @@ const SocialLinks: React.FC<ISocialLinksProps> = ({ className, style }) => (
       title="Medium Blog"
       href="https://arbaz5256.medium.com/"
     >
-      <Icon icon="medium" color="white" />
+      <Icon icon="medium" highlighted />
     </IconLink>
 
     <IconLink
@@ -21,24 +21,24 @@ const SocialLinks: React.FC<ISocialLinksProps> = ({ className, style }) => (
       title="Dribbble Shots"
       href="https://dribbble.com/zabarsabar"
     >
-      <Icon icon="dribbble" variant="stroke" color="white" />
+      <Icon icon="dribbble" variant="stroke" highlighted />
     </IconLink>
     <IconLink target="_blank" title="Github" href="https://github.com/arbaz52">
-      <Icon icon="github" variant="stroke" color="white" />
+      <Icon icon="github" variant="stroke" highlighted />
     </IconLink>
     <IconLink
       target="_blank"
       title="LinkedIn Profile"
       href="https://www.linkedin.com/in/arbaz-ajaz/"
     >
-      <Icon icon="linkedin" variant="stroke" color="white" />
+      <Icon icon="linkedin" variant="stroke" highlighted />
     </IconLink>
     <IconLink
       target="_blank"
       title="Business Email"
       href="mailto:arbaz5256@gmail.com"
     >
-      <Icon icon="mail" variant="stroke" color="white" />
+      <Icon icon="mail" variant="stroke" highlighted />
     </IconLink>
   </SocialLinksWrapper>
 );
