@@ -12,7 +12,7 @@ import {
 
 const WhatIDoSection: React.FC = () => {
   return (
-    <Section>
+    <Section id="work">
       <ContentWrapper>
         <TextWrapper>
           <h5>What I do</h5>

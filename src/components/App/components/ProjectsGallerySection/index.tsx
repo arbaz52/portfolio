@@ -19,20 +19,12 @@ import Button from "components/Button";
 
 const ProjectsGallerySection: React.FC = () => {
   return (
-    <Section>
+    <Section id="gallery">
       <ContentWrapper>
         <TextWrapper>
           <h5>Projects Gallery</h5>
           <Typography variant="body" lead>
-            Some projects I have recently designed. Checkout the rest of the
-            projects I have worked on on{" "}
-            <Typography
-              variant="accent"
-              as="a"
-              href="https://github.com/arbaz52"
-            >
-              Github
-            </Typography>
+            Some projects I have recently designed.
           </Typography>
           <ButtonsWrapper>
             <Button

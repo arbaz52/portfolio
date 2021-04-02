@@ -7,7 +7,7 @@ import { Section } from "./styled.components";
 
 const AboutSection: React.FC = () => {
   return (
-    <Section>
+    <Section id="about">
       <PortraitAndLinks />
       <AboutMe />
     </Section>

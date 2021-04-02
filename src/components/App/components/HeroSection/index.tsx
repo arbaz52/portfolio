@@ -13,7 +13,7 @@ import {
 import SocialLinks from "components/SocialLinks";
 
 const HeroSection: React.FC = () => (
-  <Section>
+  <Section id="hero">
     <span></span>
     <ContentWrapper>
       <PortraitGrey />

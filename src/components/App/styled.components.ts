@@ -77,3 +77,23 @@ export const Section = styled.div`
   width: 100%;
   min-height: 100vh;
 `;
+
+export const Stripe = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+
+  padding: 70px 0;
+  min-height: 400px;
+
+  background: black;
+`;
+
+export const IconWithText = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 16px;
+`;

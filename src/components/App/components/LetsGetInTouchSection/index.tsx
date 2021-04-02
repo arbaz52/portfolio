@@ -9,7 +9,7 @@ import SocialLinks from "components/SocialLinks";
 
 const LetsGetInTouchSection: React.FC = () => {
   return (
-    <Section>
+    <Section id="contact">
       <Icon icon="mail-64" variant="stroke" color="white" />
       <ContentWrapper>
         <h5>Let's Get In Touch!</h5>

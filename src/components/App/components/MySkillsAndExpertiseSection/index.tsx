@@ -11,7 +11,7 @@ import {
 
 const MySkillsAndExpertiseSection: React.FC = () => {
   return (
-    <Section>
+    <Section id="skills">
       <ContentWrapper>
         <TextWrapper>
           <h5>My Skills and Expertise</h5>

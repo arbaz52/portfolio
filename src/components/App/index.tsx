@@ -16,6 +16,9 @@ import { TTheme } from "contexts/ThemeContext/types";
 import { CSSReset, Headings } from "./styled.components";
 import MySkillsAndExpertiseSection from "./components/MySkillsAndExpertiseSection";
 import LetsGetInTouchSection from "./components/LetsGetInTouchSection";
+import WhatIUseStrip from "./components/WhatIUseStrip";
+import RelatableContentStrip from "./components/RelatableContentStrip";
+import Navigation from "./components/Navigation";
 
 const App: React.FC = () => {
   const [theme, toggleTheme] = React.useReducer(
@@ -34,9 +37,12 @@ const App: React.FC = () => {
         <HeroSection />
         <AboutSection />
         <WhatIDoSection />
+        <WhatIUseStrip />
         <MySkillsAndExpertiseSection />
         <ProjectsGallerySection />
+        <RelatableContentStrip />
         <LetsGetInTouchSection />
+        <Navigation />
       </ThemeProvider>
     </ThemeContext.Provider>
   );
