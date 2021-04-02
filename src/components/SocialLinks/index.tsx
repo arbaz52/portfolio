@@ -1,10 +1,13 @@
 import React from "react";
 
-import { SocialLinksWrapper } from "./styled.components";
 import Icon from "components/Icon";
 
-const SocialLinks: React.FC = () => (
-  <SocialLinksWrapper>
+import { ISocialLinksProps } from "./types";
+
+import { SocialLinksWrapper } from "./styled.components";
+
+const SocialLinks: React.FC<ISocialLinksProps> = ({ className, style }) => (
+  <SocialLinksWrapper style={style} className={className}>
     <Icon icon="medium" color="white" />
     <Icon icon="dribbble" variant="stroke" color="white" />
     <Icon icon="github" variant="stroke" color="white" />

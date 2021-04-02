@@ -3,6 +3,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 
 import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
 
 import ThemeContext from "contexts/ThemeContext";
 
@@ -10,7 +11,7 @@ import { lightTheme, darkTheme } from "assets/themes";
 
 import { TTheme } from "contexts/ThemeContext/types";
 
-import { CSSReset, Headings, Section } from "./styled.components";
+import { CSSReset, Headings } from "./styled.components";
 
 const App: React.FC = () => {
   const [theme, toggleTheme] = React.useReducer(
@@ -27,7 +28,7 @@ const App: React.FC = () => {
         <CSSReset />
         <Headings />
         <HeroSection />
-        <Section />
+        <AboutSection />
       </ThemeProvider>
     </ThemeContext.Provider>
   );
