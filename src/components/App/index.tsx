@@ -1,10 +1,14 @@
 import React from "react";
 
-import { CSSReset } from "./styled.components";
+import PortraitGrey from "assets/svgs/portrait-grey.svg";
+
+import { CSSReset, Headings } from "./styled.components";
 
 const App: React.FC = () => (
   <>
     <CSSReset />
+    <Headings />
+    <PortraitGrey />
     <h1>Hello world</h1>
   </>
 );
