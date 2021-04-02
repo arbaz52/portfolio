@@ -1,4 +1,4 @@
-import styled, { css } from "assets/themes";
+import styled from "assets/themes";
 
 import Svg from "components/Svg";
 
