@@ -14,6 +14,8 @@ import {
 import { BoxContentWrapper, Box, IconsWrapper } from "./styled.components";
 import Icon from "components/Icon";
 import { IconLink } from "components/SocialLinks/styled.components";
+import { ButtonsWrapper } from "../HeroSection/styled.components";
+import Button from "components/Button";
 
 const ProjectsGallerySection: React.FC = () => {
   return (
@@ -24,10 +26,43 @@ const ProjectsGallerySection: React.FC = () => {
           <Typography variant="body" lead>
             Some projects I have recently designed. Checkout the rest of the
             projects I have worked on on{" "}
-            <Typography variant="accent" as="a" href="https://github.com/arbaz52">
+            <Typography
+              variant="accent"
+              as="a"
+              href="https://github.com/arbaz52"
+            >
               Github
             </Typography>
           </Typography>
+          <ButtonsWrapper>
+            <Button
+              as="a"
+              href="https://github.com/arbaz52"
+              target="_blank"
+              size="small"
+              variation="outlined"
+            >
+              Github Projects
+            </Button>
+            <Button
+              as="a"
+              href="https://dribbble.com/zabarsabar"
+              target="_blank"
+              size="small"
+              variation="outlined"
+            >
+              Dribbble Shots
+            </Button>
+            <Button
+              as="a"
+              href="https://arbaz5256.medium.com/"
+              target="_blank"
+              size="small"
+              variation="outlined"
+            >
+              Medium Articles
+            </Button>
+          </ButtonsWrapper>
         </TextWrapper>
         <BoxesWrapper>
           <div>

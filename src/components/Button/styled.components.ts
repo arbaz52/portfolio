@@ -18,6 +18,9 @@ export const Button = styled.button<IButtonProps>`
   display: flex;
   gap: 12px;
   align-items: center;
+
+  white-space: nowrap;
+  
   ${(props) => {
     switch (props.size) {
       case "small":
