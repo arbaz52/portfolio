@@ -1,4 +1,5 @@
 import styled, { css } from "assets/themes";
+import breakpoints from "assets/themes/breakpoints";
 import Svg from "components/Svg";
 import { ISvgProps } from "components/Svg/types";
 
@@ -11,7 +12,6 @@ export const Button = styled.button<IButtonProps>`
   font-weight: 400;
   text-decoration: none;
   letter-spacing: 2px;
-  /* text-transform: uppercase; */
   border: 1px solid transparent;
   background: transparent;
   color: ${(props) => props.theme.colors.text};
@@ -20,7 +20,7 @@ export const Button = styled.button<IButtonProps>`
   align-items: center;
 
   white-space: nowrap;
-  
+
   ${(props) => {
     switch (props.size) {
       case "small":
@@ -62,6 +62,14 @@ export const Button = styled.button<IButtonProps>`
   }};
   background: ${(props) => props.background};
   color: ${(props) => props.contentColor};
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+
+    text-transform: uppercase;
+    padding: 8px 16px;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
 `;
 
 export const Icon = styled(Svg)<IButtonProps & ISvgProps>`
@@ -82,5 +90,9 @@ export const Icon = styled(Svg)<IButtonProps & ISvgProps>`
           `;
       }
     }};
+  }
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    transform: scale(0.875);
   }
 `;

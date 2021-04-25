@@ -9,6 +9,7 @@ import {
   ContentWrapper,
   Section,
   South,
+  Tagline,
 } from "./styled.components";
 import SocialLinks from "components/SocialLinks";
 
@@ -17,7 +18,9 @@ const HeroSection: React.FC = () => (
     <span></span>
     <ContentWrapper>
       <PortraitGrey />
-      <h5>Graduate in Computer Science | 3.38 CGPA</h5>
+      <Tagline>
+        <span>Graduate in Computer Science</span> <span>3.38 CGPA</span>
+      </Tagline>
       <h1>
         ReactJS Developer
         <br />
