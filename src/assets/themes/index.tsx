@@ -37,8 +37,9 @@ export const darkTheme: ITheme = {
 };
 
 export const {
-  createGlobalStyle,
   css,
+  keyframes,
+  createGlobalStyle,
 } = (styledCompnents as unknown) as ThemedStyledComponentsModule<ITheme>;
 
 export default styled;
