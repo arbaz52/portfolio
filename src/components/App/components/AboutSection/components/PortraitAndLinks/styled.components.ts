@@ -10,6 +10,10 @@ export const PortraitAndLinksWrapper = styled.div`
 
   @media only screen and (max-width: ${breakpoints.md}) {
     align-self: flex-start;
+
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
   }
 `;
 

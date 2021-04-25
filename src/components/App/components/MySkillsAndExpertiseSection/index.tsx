@@ -25,21 +25,21 @@ const MySkillsAndExpertiseSection: React.FC = () => {
         </TextWrapper>
 
         <PillsWrapper>
-          <Pill>
-            <PillIcon icon="code" variant="stroke" />
-            <h6>HTML5, CSS3, Javascript</h6>
-          </Pill>
           <Pill highlighted>
             <PillIcon icon="code" variant="stroke" />
             <h6>ReactJS</h6>
           </Pill>
           <Pill>
-            <PillIcon icon="pen" variant="stroke" />
-            <h6>Wordpress</h6>
+            <PillIcon icon="code" variant="stroke" />
+            <h6>HTML5, CSS3, Javascript</h6>
           </Pill>
           <Pill>
             <PillIcon icon="pen" variant="stroke" />
             <h6>Figma and Adobe XD</h6>
+          </Pill>
+          <Pill>
+            <PillIcon icon="pen" variant="stroke" />
+            <h6>Wordpress</h6>
           </Pill>
         </PillsWrapper>
 

@@ -51,7 +51,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const PillsWrapper = styled.div`
-  gap: 4px;
+  gap: 8px;
   display: flex;
   flex-wrap: wrap;
 
@@ -63,11 +63,14 @@ export const PillsWrapper = styled.div`
 export const Pill = styled.div<{ highlighted?: boolean }>`
   transform-origin: left;
 
-  transform: scale(0.875);
-  padding: 8px 24px;
+  & * {
+    font-size: 0.75rem !important;
+  }
+
+  padding: 4px 16px ;
 
   display: flex;
-  gap: 12px;
+  gap: 8px;
 
   border-radius: 32px;
 
@@ -85,5 +88,5 @@ export const Pill = styled.div<{ highlighted?: boolean }>`
 `;
 
 export const PillIcon = styled(Icon)`
-  transform: scale(0.875);
+  transform: scale(0.75);
 `;
