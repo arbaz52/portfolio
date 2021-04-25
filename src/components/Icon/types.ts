@@ -5,4 +5,6 @@ export interface IIconProps extends ISvgProps {
   variant?: "stroke" | "fill";
 
   highlighted?: boolean;
+
+  onClick?: () => void;
 }

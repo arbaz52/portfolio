@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "assets/themes";
+import breakpoints from "assets/themes/breakpoints";
 
 export const CSSReset = createGlobalStyle`
   * {
@@ -72,7 +73,7 @@ export const Headings = createGlobalStyle`
     letter-spacing: 0;
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: ${breakpoints.sm}) {
     h1 {
       font-size: 1.802rem;
       line-height: 40px;

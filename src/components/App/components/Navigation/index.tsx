@@ -1,18 +1,24 @@
-import Icon from "components/Icon";
-import { IconLink } from "components/SocialLinks/styled.components";
 import React from "react";
-import ThemeSwitcher from "./components/ThemeSwitcher";
-import { NavigationWrapper } from "./styled.components";
 
-// const LINKS = [
-//   {
-//     title: "",
-//     href: "",
-//     icon: "",
-//     iconVariant: ""
-//   }
-// ]
+import Icon from "components/Icon";
+
+import ThemeSwitcher from "./components/ThemeSwitcher";
+
+import {
+  NavigationWrapper,
+  IconLink,
+  LinkTitle,
+  NavigationContainer,
+  CloseIcon,
+  OpenNavigation,
+} from "./styled.components";
+
 const Navigation: React.FC = () => {
+  const [navigationOpen, toggleNavigation] = React.useReducer(
+    (state) => !state,
+    false
+  );
+
   const handleClick = React.useCallback(
     (ev: React.MouseEvent<HTMLAnchorElement>) => {
       ev.preventDefault();
@@ -31,42 +37,60 @@ const Navigation: React.FC = () => {
     []
   );
   return (
-    <NavigationWrapper>
-      <IconLink onClick={handleClick} title="Hero" href="#hero">
-        <Icon icon="tv" variant="stroke" highlighted />
-      </IconLink>
+    <>
+      <OpenNavigation
+        icon="burger"
+        variant="stroke"
+        onClick={toggleNavigation}
+      />
+      <NavigationContainer open={navigationOpen}>
+        <CloseIcon onClick={toggleNavigation}>
+          <Icon icon="close" variant="stroke" highlighted />
+        </CloseIcon>
+        <NavigationWrapper>
+          <IconLink onClick={handleClick} title="Hero" href="#hero">
+            <Icon icon="tv" variant="stroke" /> <LinkTitle>HERO</LinkTitle>
+          </IconLink>
 
-      <IconLink onClick={handleClick} title="About" href="#about">
-        <Icon icon="person" variant="stroke" highlighted />
-      </IconLink>
+          <IconLink onClick={handleClick} title="About" href="#about">
+            <Icon icon="person" variant="stroke" /> <LinkTitle>ABOUT</LinkTitle>
+          </IconLink>
 
-      <IconLink onClick={handleClick} title="Work" href="#work">
-        <Icon icon="briefcase" variant="stroke" highlighted />
-      </IconLink>
+          <IconLink onClick={handleClick} title="Work" href="#work">
+            <Icon icon="briefcase" variant="stroke" />{" "}
+            <LinkTitle>WHAT I DO</LinkTitle>
+          </IconLink>
 
-      <IconLink onClick={handleClick} title="Using" href="#using">
-        <Icon icon="heart" variant="stroke" highlighted />
-      </IconLink>
+          <IconLink onClick={handleClick} title="Using" href="#using">
+            <Icon icon="heart" variant="stroke" /> <LinkTitle>SKILLS</LinkTitle>
+          </IconLink>
 
-      <IconLink onClick={handleClick} title="Skills" href="#skills">
-        <Icon icon="zap" variant="stroke" highlighted />
-      </IconLink>
+          <IconLink onClick={handleClick} title="Skills" href="#skills">
+            <Icon icon="zap" variant="stroke" /> <LinkTitle>SKILLS</LinkTitle>
+          </IconLink>
 
-      <IconLink onClick={handleClick} title="Projects Gallery" href="#gallery">
-        <Icon icon="camera" variant="stroke" highlighted />
-      </IconLink>
+          <IconLink
+            onClick={handleClick}
+            title="Projects Gallery"
+            href="#gallery"
+          >
+            <Icon icon="camera" variant="stroke" />{" "}
+            <LinkTitle>GALLERY</LinkTitle>
+          </IconLink>
 
-      <IconLink onClick={handleClick} title="Numbers" href="#relatable">
-        <Icon icon="hashtag" variant="stroke" highlighted />
-      </IconLink>
+          <IconLink onClick={handleClick} title="Numbers" href="#relatable">
+            <Icon icon="hashtag" variant="stroke" />{" "}
+            <LinkTitle>CONTRIBUTIONS</LinkTitle>
+          </IconLink>
 
-      <IconLink onClick={handleClick} title="Get In Touch" href="#contact">
-        <Icon icon="mail" variant="stroke" highlighted />
-      </IconLink>
-      <span></span>
-
-      <ThemeSwitcher />
-    </NavigationWrapper>
+          <IconLink onClick={handleClick} title="Get In Touch" href="#contact">
+            <Icon icon="mail" variant="stroke" />{" "}
+            <LinkTitle>GET IN TOUCH</LinkTitle>
+          </IconLink>
+        </NavigationWrapper>
+        <ThemeSwitcher />
+      </NavigationContainer>
+    </>
   );
 };
 
