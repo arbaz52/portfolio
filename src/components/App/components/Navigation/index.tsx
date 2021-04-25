@@ -14,10 +14,11 @@ import {
 } from "./styled.components";
 
 const Navigation: React.FC = () => {
-  const [navigationOpen, toggleNavigation] = React.useReducer(
-    (state) => !state,
-    false
-  );
+  const [navigationOpen, setNavigationOpen] = React.useState(false);
+
+  const toggleNavigation = React.useCallback(() => {
+    setNavigationOpen((pv) => !pv);
+  }, []);
 
   const handleClick = React.useCallback(
     (ev: React.MouseEvent<HTMLAnchorElement>) => {
@@ -29,6 +30,7 @@ const Navigation: React.FC = () => {
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
           window.history.pushState({}, "", href);
+          setNavigationOpen(false);
         }
       } catch (ex) {
         console.error(ex);
