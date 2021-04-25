@@ -1,4 +1,5 @@
 import styled from "assets/themes";
+import breakpoints from "assets/themes/breakpoints";
 
 export const BoxWrapper = styled.div`
   display: flex;
@@ -18,6 +19,12 @@ export const BoxWrapper = styled.div`
         color: ${(props) => props.theme.colors.bodyText};
       }
     }
+  }
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    width: 80%;
+    flex: unset;
+    flex-shrink: 0;
   }
 `;
 

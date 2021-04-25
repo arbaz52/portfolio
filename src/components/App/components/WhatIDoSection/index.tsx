@@ -6,8 +6,11 @@ import React from "react";
 import {
   BoxesWrapper,
   ContentWrapper,
+  Pill,
   Section,
   TextWrapper,
+  PillIcon,
+  PillsWrapper,
 } from "./styled.components";
 
 const WhatIDoSection: React.FC = () => {
@@ -17,6 +20,16 @@ const WhatIDoSection: React.FC = () => {
         <TextWrapper>
           <h5>What I do</h5>
         </TextWrapper>
+        <PillsWrapper>
+          <Pill highlighted>
+            <PillIcon icon="pen" variant="stroke" />
+            <h6>Design Websites</h6>
+          </Pill>
+          <Pill>
+            <PillIcon icon="code" variant="stroke" />
+            <h6>Develop Websites</h6>
+          </Pill>
+        </PillsWrapper>
         <BoxesWrapper>
           <Box
             active
