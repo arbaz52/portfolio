@@ -1,12 +1,11 @@
+import Svg from "components/Svg";
 import React from "react";
-
-import Portrait from "assets/svgs/portrait.svg";
 
 import { PortraitAndLinksWrapper, SocialLinks } from "./styled.components";
 
 const PortraitAndLinks: React.FC = () => (
   <PortraitAndLinksWrapper>
-    <Portrait />
+    <Svg icon="portrait" />
     <SocialLinks />
   </PortraitAndLinksWrapper>
 );

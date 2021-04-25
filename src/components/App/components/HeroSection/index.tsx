@@ -2,8 +2,6 @@ import React from "react";
 
 import Button from "components/Button";
 
-import PortraitGrey from "assets/svgs/portrait-grey.svg";
-
 import {
   ButtonsWrapper,
   ContentWrapper,
@@ -12,12 +10,13 @@ import {
   Tagline,
 } from "./styled.components";
 import SocialLinks from "components/SocialLinks";
+import Svg from "components/Svg";
 
 const HeroSection: React.FC = () => (
   <Section id="hero">
     <span></span>
     <ContentWrapper>
-      <PortraitGrey />
+      <Svg icon="portrait-grey" />
       <Tagline>
         <span>Graduate in Computer Science</span> <span>3.38 CGPA</span>
       </Tagline>
