@@ -105,6 +105,10 @@ export const Headings = createGlobalStyle`
 export const Section = styled.div`
   width: 100%;
   min-height: 100vh;
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    padding: 24px;
+  }
 `;
 
 export const Stripe = styled.div`
