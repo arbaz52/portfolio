@@ -71,6 +71,34 @@ export const Headings = createGlobalStyle`
     line-height: 24px;
     letter-spacing: 0;
   }
+
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 1.802rem;
+      line-height: 40px;
+    }
+    h2 {
+      font-size: 1.602rem;
+      line-height: 40px;
+    }
+    h3 {
+      font-size: 1.424rem;
+      line-height: 32px;
+    }
+    h4 {
+      font-size: 1.266rem;
+      line-height: 32px;
+    }
+    h5 {
+      font-size: 1.125rem;
+      line-height: 24px;
+    }
+    h6 {
+      font-size: 1rem;
+      line-height: 24px;
+      letter-spacing: 0;
+    }
+  }
 `;
 
 export const Section = styled.div`
