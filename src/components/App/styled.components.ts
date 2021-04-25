@@ -5,6 +5,8 @@ export const CSSReset = createGlobalStyle`
   * {
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
+
+    transition: all 0.3s ease-in-out;
   }
 
   html, body {

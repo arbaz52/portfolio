@@ -44,6 +44,7 @@ const Navigation: React.FC = () => {
         icon="burger"
         variant="stroke"
         onClick={toggleNavigation}
+        highlighted
       />
       <NavigationContainer open={navigationOpen}>
         <CloseIcon onClick={toggleNavigation}>
