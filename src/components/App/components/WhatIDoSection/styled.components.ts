@@ -20,12 +20,14 @@ export const ContentWrapper = styled.div`
   gap: 32px;
 
   max-width: 700px;
+  width: 100%;
 `;
 
 export const BoxesWrapper = styled.div`
-  display: flex;
-  gap: 32px;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  grid-gap: 24px;
   overflow: auto;
 
   ::-webkit-scrollbar {
@@ -33,6 +35,8 @@ export const BoxesWrapper = styled.div`
   }
 
   @media only screen and (max-width: ${breakpoints.md}) {
+    display: flex;
+    flex-direction: row;
     margin-right: -24px;
     margin-left: -24px;
     padding-left: 24px;
@@ -57,6 +61,8 @@ export const PillsWrapper = styled.div`
   }
 `;
 export const Pill = styled.div<{ highlighted?: boolean }>`
+  transform-origin: left;
+
   transform: scale(0.875);
   padding: 8px 24px;
 

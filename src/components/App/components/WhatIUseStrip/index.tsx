@@ -1,8 +1,8 @@
 import React from "react";
 
-import { IconWithText, Stripe } from "components/App/styled.components";
+import { IconWithText } from "components/App/styled.components";
 import Icon from "components/Icon";
-import { ContentWrapper } from "./styled.components";
+import { ContentWrapper, Stripe } from "./styled.components";
 
 const WhatIUseStrip: React.FC = () => (
   <Stripe id="using">

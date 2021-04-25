@@ -45,7 +45,8 @@ const App: React.FC = () => {
         <Headings />
         <LazyLoad>
           <HeroSection />
-        </LazyLoad> <LazyLoad>
+        </LazyLoad>{" "}
+        <LazyLoad>
           <AboutSection />
         </LazyLoad>
         <LazyLoad>
@@ -65,7 +66,7 @@ const App: React.FC = () => {
         </LazyLoad>
         <LazyLoad>
           <LetsGetInTouchSection />
-        </LazyLoad> 
+        </LazyLoad>
         <LazyLoad>
           <Navigation />
         </LazyLoad>
