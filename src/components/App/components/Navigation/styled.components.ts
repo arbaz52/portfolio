@@ -13,7 +13,7 @@ export const NavigationContainer = styled.div<{ open: boolean }>`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (max-width: ${breakpoints.sm}) {
+  @media only screen and (max-width: ${breakpoints.lg}) {
     top: 0px;
     left: 0px;
     padding: 24px;
@@ -26,7 +26,7 @@ export const NavigationContainer = styled.div<{ open: boolean }>`
     background: ${(props) => props.theme.colors.backgroundHighlighted};
   }
 
-  @media only screen and (max-width: ${breakpoints.sm}) {
+  @media only screen and (max-width: ${breakpoints.lg}) {
     ${({ open }) =>
       !open &&
       css`
@@ -46,14 +46,14 @@ export const IconLink = styled(_IconLink)`
   display: flex;
   flex-direction: row;
   text-decoration: none;
-  @media only screen and (max-width: ${breakpoints.sm}) {
+  @media only screen and (max-width: ${breakpoints.lg}) {
     justify-content: flex-end;
   }
 `;
 
 export const LinkTitle = styled.h6`
   display: none;
-  @media only screen and (max-width: ${breakpoints.sm}) {
+  @media only screen and (max-width: ${breakpoints.lg}) {
     display: block;
   }
 `;
@@ -62,14 +62,14 @@ export const CloseIcon = styled(IconLink)`
   margin-right: -16px;
   display: none;
   align-self: flex-end;
-  @media only screen and (max-width: ${breakpoints.sm}) {
+  @media only screen and (max-width: ${breakpoints.lg}) {
     display: block;
   }
 `;
 
 export const OpenNavigation = styled(Icon)`
   display: none;
-  @media only screen and (max-width: ${breakpoints.sm}) {
+  @media only screen and (max-width: ${breakpoints.lg}) {
     display: block;
   }
 

@@ -73,7 +73,7 @@ export const Headings = createGlobalStyle`
     letter-spacing: 0;
   }
 
-  @media only screen and (max-width: ${breakpoints.sm}) {
+  @media only screen and (max-width: ${breakpoints.lg}) {
     h1 {
       font-size: 1.802rem;
       line-height: 40px;
