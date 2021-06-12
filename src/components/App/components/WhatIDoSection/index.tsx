@@ -4,13 +4,12 @@ import Typography from "components/Typography";
 import React from "react";
 
 import {
-  BoxesWrapper,
-  ContentWrapper,
   Pill,
   Section,
-  TextWrapper,
   PillIcon,
+  TextWrapper,
   PillsWrapper,
+  ContentWrapper,
   SingleColumnBoxesWrapper,
 } from "./styled.components";
 
@@ -23,33 +22,33 @@ const WhatIDoSection: React.FC = () => {
         </TextWrapper>
         <PillsWrapper>
           <Pill highlighted>
-            <PillIcon icon="figma" variant="stroke" />
-            <h6>Design Websites</h6>
+            <PillIcon icon="code" variant="stroke" />
+            <h6>Develop Websites</h6>
           </Pill>
-          <Pill >
+          <Pill>
             <PillIcon icon="pen" variant="stroke" />
             <h6>Write Articles</h6>
           </Pill>
           <Pill>
-            <PillIcon icon="code" variant="stroke" />
-            <h6>Develop Websites</h6>
+            <PillIcon icon="figma" variant="stroke" />
+            <h6>Design Websites</h6>
           </Pill>
         </PillsWrapper>
         <SingleColumnBoxesWrapper>
           <Box
             active
-            icon={<Icon icon="figma" variant="stroke" />}
-            title="Design Websites"
+            title="Develop Websites"
+            icon={<Icon icon="code" variant="stroke" />}
           >
             <Typography variant="secondary">
-              I use Figma for designing, I do my research, look for fonts and
-              colors that my client loves and are appreciated by the industry
-              the client’s website is targeting.
+              Choosing a framework/platform mostly depends on two things, the
+              target client is trying to achieve with the website and client’s
+              technical know-how.
             </Typography>
           </Box>
           <Box
-            icon={<Icon icon="pen" variant="stroke" />}
             title="Write Articles"
+            icon={<Icon icon="pen" variant="stroke" />}
           >
             <Typography variant="secondary">
               Writing about solutions for the problems I face and solve through
@@ -58,13 +57,13 @@ const WhatIDoSection: React.FC = () => {
             </Typography>
           </Box>
           <Box
-            icon={<Icon icon="code" variant="stroke" />}
-            title="Develop Websites"
+            title="Design Websites"
+            icon={<Icon icon="figma" variant="stroke" />}
           >
             <Typography variant="secondary">
-              Choosing a framework/platform mostly depends on two things, the
-              target client is trying to achieve with the website and client’s
-              technical know-how.
+              I use Figma for designing, I do my research, look for fonts and
+              colors that my client loves and are appreciated by the industry
+              the client’s website is targeting.
             </Typography>
           </Box>
         </SingleColumnBoxesWrapper>

@@ -10,7 +10,6 @@ import { TTheme } from "contexts/ThemeContext/types";
 
 import { CSSReset, Headings } from "./styled.components";
 import LazyLoad from "./components/LazyLoad";
-import axios from "axios";
 import { IRSSFeedData } from "./types";
 import { IArticle, IArticlesContext } from "contexts/ArticlesContext/types";
 import useAxios from "hooks/useAxios";
@@ -43,23 +42,17 @@ const App: React.FC = () => {
     "Dark"
   );
 
-  const {
-    data: feedData,
-    loading,
-    error,
-  } = useAxios<IRSSFeedData>(
+  const { data: feedData, loading } = useAxios<IRSSFeedData>(
     "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40arbaz5256"
   );
 
   const articles = React.useMemo<IArticle[]>(() => {
     return (
-      feedData?.items
-        .map(({ title, link, description: content }) => ({
-          link,
-          title,
-          content,
-        }))
-        .slice(0, 5) ?? []
+      feedData?.items.map(({ title, link, description: content }) => ({
+        link,
+        title,
+        content,
+      })) ?? []
     );
   }, [feedData]);
 

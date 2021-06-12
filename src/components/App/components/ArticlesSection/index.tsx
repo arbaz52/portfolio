@@ -18,7 +18,7 @@ import {
 } from "../WhatIDoSection/styled.components";
 import {
   HTMLPreviewer,
-  LoadingWrapper,
+  LoadingWrapper as CenterWrapper,
   BoxContentWrapper,
   BoxesWrapperReplaceFractions,
 } from "./styled.components";
@@ -26,6 +26,9 @@ import { ButtonsWrapper } from "../HeroSection/styled.components";
 
 const MySkillsAndExpertiseSection: React.FC = () => {
   const { articles, loading } = React.useContext(ArticlesContext);
+
+  const [expand, toggleExpand] = React.useReducer((state) => !state, false);
+
   return (
     <Section id="skills">
       <ContentWrapper>
@@ -50,24 +53,35 @@ const MySkillsAndExpertiseSection: React.FC = () => {
         </TextWrapper>
 
         {loading ? (
-          <LoadingWrapper>
+          <CenterWrapper>
             <Dots />
-          </LoadingWrapper>
+          </CenterWrapper>
         ) : (
-          <BoxesWrapperReplaceFractions>
-            {articles.map(({ title, content, link }, index) => (
-              <Box title={title} active={index === 0}>
-                <BoxContentWrapper>
-                  <Typography variant="secondary">
-                    <HTMLPreviewer readOnly value={content} />
-                  </Typography>
-                  <Link target="_blank" href={link}>
-                    Read more...
-                  </Link>
-                </BoxContentWrapper>
-              </Box>
-            ))}
-          </BoxesWrapperReplaceFractions>
+          <>
+            <BoxesWrapperReplaceFractions>
+              {articles
+                .slice(0, expand ? articles.length : 3)
+                .map(({ title, content, link }, index) => (
+                  <Box title={title} active={index === 0} key={title}>
+                    <BoxContentWrapper>
+                      <Typography variant="secondary">
+                        <HTMLPreviewer readOnly value={content} />
+                      </Typography>
+                      <Link target="_blank" href={link}>
+                        Read more...
+                      </Link>
+                    </BoxContentWrapper>
+                  </Box>
+                ))}
+            </BoxesWrapperReplaceFractions>
+            {!expand && (
+              <CenterWrapper>
+                <Link href="#" onClick={toggleExpand}>
+                  List All Articles ({articles.length})
+                </Link>
+              </CenterWrapper>
+            )}
+          </>
         )}
       </ContentWrapper>
     </Section>

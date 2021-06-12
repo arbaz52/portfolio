@@ -36,7 +36,7 @@ export const HTMLPreviewer = styled(Quill)`
 `;
 
 export const BoxesWrapperReplaceFractions = styled(BoxesWrapper)`
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%
 `;
 
 export const LoadingWrapper = styled.div`

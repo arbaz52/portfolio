@@ -1,5 +1,4 @@
 import styled from "assets/themes";
-import Typography from "components/Typography";
 
 export const Link = styled.a`
   font-size: 12px;
