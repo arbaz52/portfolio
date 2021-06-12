@@ -38,4 +38,4 @@ const WhatIUseStrip: React.FC = () => (
   </Stripe>
 );
 
-export default WhatIUseStrip;
+export default React.memo(WhatIUseStrip);

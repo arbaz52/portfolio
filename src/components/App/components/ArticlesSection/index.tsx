@@ -4,21 +4,28 @@ import React from "react";
 
 import Box from "components/Box";
 import Link from "components/Link";
+import Button from "components/Button";
 import Typography from "components/Typography";
 
+import ArticlesContext from "contexts/ArticlesContext";
+
+import Dots from "../LazyLoad/components/Fallback/components/Dots";
+
 import {
-  Pill,
   Section,
-  PillIcon,
   TextWrapper,
-  PillsWrapper,
-  BoxesWrapper,
   ContentWrapper,
 } from "../WhatIDoSection/styled.components";
-import { BoxContentWrapper, HTMLPreviewer } from "./styled.components";
-import { FixedLinesTypography } from "components/Link/styled.components";
+import {
+  HTMLPreviewer,
+  LoadingWrapper,
+  BoxContentWrapper,
+  BoxesWrapperReplaceFractions,
+} from "./styled.components";
+import { ButtonsWrapper } from "../HeroSection/styled.components";
 
 const MySkillsAndExpertiseSection: React.FC = () => {
+  const { articles, loading } = React.useContext(ArticlesContext);
   return (
     <Section id="skills">
       <ContentWrapper>
@@ -28,49 +35,43 @@ const MySkillsAndExpertiseSection: React.FC = () => {
             Big fan of learnig new things, so when i solve a new problem i
             publish the solution.
           </Typography>
+          <ButtonsWrapper>
+            <Button
+              as="a"
+              href="https://arbaz5256.medium.com/"
+              target="_blank"
+              size="small"
+              variation="outlined"
+              prefix="medium"
+            >
+              My Medium Blog
+            </Button>
+          </ButtonsWrapper>
         </TextWrapper>
 
-        <PillsWrapper>
-          <Pill highlighted>
-            <PillIcon icon="code" variant="stroke" />
-            <h6>ReactJS</h6>
-          </Pill>
-          <Pill>
-            <PillIcon icon="code" variant="stroke" />
-            <h6>HTML5, CSS3, Javascript</h6>
-          </Pill>
-          <Pill>
-            <PillIcon icon="pen" variant="stroke" />
-            <h6>Figma and Adobe XD</h6>
-          </Pill>
-          <Pill>
-            <PillIcon icon="pen" variant="stroke" />
-            <h6>Wordpress</h6>
-          </Pill>
-        </PillsWrapper>
-
-        <BoxesWrapper>
-          <Box active title="ReactJS">
-            <Typography variant="secondary">
-              I have been working as a ReactJS Developer at Embrace IT Pakistan
-              and is <b>actively working on new ideas.</b>
-            </Typography>
-          </Box>
-          <Box title="HTML5, CSS3, Javascript">
-            <BoxContentWrapper>
-              <FixedLinesTypography variant="secondary">
-                <HTMLPreviewer
-                  readOnly
-                  value={`<h3>Use useEffect hook effectively as a callback for state changes.</h3> <p>Bare with me, let me explain the scenario first.</p> <p>Imagine you need to do something, i.e. call a function when a state updates, easiest way in React would be to use React.useEffect and use the state as the dependency so the hook fires every time the state updates.</p> <p>But according to the documentation, the dependency array should contain things i.e`}
-                />
-              </FixedLinesTypography>
-              <Link href="link to article">Read more...</Link>
-            </BoxContentWrapper>
-          </Box>
-        </BoxesWrapper>
+        {loading ? (
+          <LoadingWrapper>
+            <Dots />
+          </LoadingWrapper>
+        ) : (
+          <BoxesWrapperReplaceFractions>
+            {articles.map(({ title, content, link }, index) => (
+              <Box title={title} active={index === 0}>
+                <BoxContentWrapper>
+                  <Typography variant="secondary">
+                    <HTMLPreviewer readOnly value={content} />
+                  </Typography>
+                  <Link target="_blank" href={link}>
+                    Read more...
+                  </Link>
+                </BoxContentWrapper>
+              </Box>
+            ))}
+          </BoxesWrapperReplaceFractions>
+        )}
       </ContentWrapper>
     </Section>
   );
 };
 
-export default MySkillsAndExpertiseSection;
+export default React.memo(MySkillsAndExpertiseSection);

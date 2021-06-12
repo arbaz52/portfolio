@@ -58,4 +58,4 @@ const WhatIDoSection: React.FC = () => {
   );
 };
 
-export default WhatIDoSection;
+export default React.memo(WhatIDoSection);

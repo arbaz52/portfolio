@@ -106,4 +106,4 @@ const ProjectsGallerySection: React.FC = () => {
   );
 };
 
-export default ProjectsGallerySection;
+export default React.memo(ProjectsGallerySection);

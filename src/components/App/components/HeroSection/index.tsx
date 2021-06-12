@@ -55,4 +55,4 @@ const HeroSection: React.FC = () => (
   </Section>
 );
 
-export default HeroSection;
+export default React.memo(HeroSection);

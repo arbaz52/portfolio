@@ -6,17 +6,9 @@ export const Link = styled.a`
   text-decoration: none;
   text-transform: uppercase;
 
-  color: ${(props) => props.theme.colors.accent};
+  color: ${(props) => props.theme.colors.accent} !important;
 
   :hover {
     text-decoration: underline;
   }
-`;
-
-export const FixedLinesTypography = styled(Typography)`
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
 `;
