@@ -16,6 +16,7 @@ const HeroSection = React.lazy(() => import("./components/HeroSection"));
 const AboutSection = React.lazy(() => import("./components/AboutSection"));
 const WhatIUseStrip = React.lazy(() => import("./components/WhatIUseStrip"));
 const WhatIDoSection = React.lazy(() => import("./components/WhatIDoSection"));
+const ArticlesSection = React.lazy(() => import("./components/ArticlesSection"));
 const LetsGetInTouchSection = React.lazy(
   () => import("./components/LetsGetInTouchSection")
 );
@@ -48,6 +49,9 @@ const App: React.FC = () => {
         </LazyLoad>{" "}
         <LazyLoad>
           <AboutSection />
+        </LazyLoad>
+        <LazyLoad>
+          <ArticlesSection />
         </LazyLoad>
         <LazyLoad>
           <WhatIDoSection />
