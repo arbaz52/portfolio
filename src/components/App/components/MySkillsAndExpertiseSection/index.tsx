@@ -74,4 +74,4 @@ const MySkillsAndExpertiseSection: React.FC = () => {
   );
 };
 
-export default MySkillsAndExpertiseSection;
+export default React.memo(MySkillsAndExpertiseSection);

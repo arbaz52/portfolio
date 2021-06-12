@@ -37,4 +37,4 @@ const RelatableContentStrip: React.FC = () => (
   </Stripe>
 );
 
-export default RelatableContentStrip;
+export default React.memo(RelatableContentStrip);

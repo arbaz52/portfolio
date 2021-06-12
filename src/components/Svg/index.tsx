@@ -12,4 +12,4 @@ const Svg: React.FC<ISvgProps> = ({ icon, ...props }) => {
   );
 };
 
-export default Svg;
+export default React.memo(Svg);

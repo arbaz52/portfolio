@@ -67,7 +67,7 @@ export const Pill = styled.div<{ highlighted?: boolean }>`
     font-size: 0.75rem !important;
   }
 
-  padding: 4px 16px ;
+  padding: 4px 16px;
 
   display: flex;
   gap: 8px;
@@ -89,4 +89,8 @@ export const Pill = styled.div<{ highlighted?: boolean }>`
 
 export const PillIcon = styled(Icon)`
   transform: scale(0.75);
+`;
+
+export const SingleColumnBoxesWrapper = styled(BoxesWrapper)`
+  grid-template-columns: 1fr;
 `;

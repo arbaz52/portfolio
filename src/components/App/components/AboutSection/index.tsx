@@ -14,4 +14,4 @@ const AboutSection: React.FC = () => {
   );
 };
 
-export default AboutSection;
+export default React.memo(AboutSection);

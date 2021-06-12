@@ -33,4 +33,4 @@ const LetsGetInTouchSection: React.FC = () => {
   );
 };
 
-export default LetsGetInTouchSection;
+export default React.memo(LetsGetInTouchSection);
