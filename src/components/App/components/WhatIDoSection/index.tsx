@@ -11,6 +11,7 @@ import {
   TextWrapper,
   PillIcon,
   PillsWrapper,
+  SingleColumnBoxesWrapper,
 } from "./styled.components";
 
 const WhatIDoSection: React.FC = () => {
@@ -22,24 +23,38 @@ const WhatIDoSection: React.FC = () => {
         </TextWrapper>
         <PillsWrapper>
           <Pill highlighted>
-            <PillIcon icon="pen" variant="stroke" />
+            <PillIcon icon="figma" variant="stroke" />
             <h6>Design Websites</h6>
+          </Pill>
+          <Pill >
+            <PillIcon icon="pen" variant="stroke" />
+            <h6>Write Articles</h6>
           </Pill>
           <Pill>
             <PillIcon icon="code" variant="stroke" />
             <h6>Develop Websites</h6>
           </Pill>
         </PillsWrapper>
-        <BoxesWrapper>
+        <SingleColumnBoxesWrapper>
           <Box
             active
-            icon={<Icon icon="pen" variant="stroke" />}
+            icon={<Icon icon="figma" variant="stroke" />}
             title="Design Websites"
           >
             <Typography variant="secondary">
               I use Figma for designing, I do my research, look for fonts and
               colors that my client loves and are appreciated by the industry
               the client’s website is targeting.
+            </Typography>
+          </Box>
+          <Box
+            icon={<Icon icon="pen" variant="stroke" />}
+            title="Write Articles"
+          >
+            <Typography variant="secondary">
+              Writing about solutions for the problems I face and solve through
+              reading documentations, figuring out why is it happening in the
+              first place and how can we fix it.
             </Typography>
           </Box>
           <Box
@@ -52,7 +67,7 @@ const WhatIDoSection: React.FC = () => {
               technical know-how.
             </Typography>
           </Box>
-        </BoxesWrapper>
+        </SingleColumnBoxesWrapper>
       </ContentWrapper>
     </Section>
   );
