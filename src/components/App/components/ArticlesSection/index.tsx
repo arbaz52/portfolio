@@ -30,7 +30,7 @@ const MySkillsAndExpertiseSection: React.FC = () => {
   const [expand, toggleExpand] = React.useReducer((state) => !state, false);
 
   return (
-    <Section id="skills">
+    <Section id="articles">
       <ContentWrapper>
         <TextWrapper>
           <h5>Articles I have written recently</h5>

@@ -59,6 +59,10 @@ const Navigation: React.FC = () => {
             <Icon icon="person" variant="stroke" /> <LinkTitle>ABOUT</LinkTitle>
           </IconLink>
 
+          <IconLink onClick={handleClick} title="Articles" href="#articles">
+            <Icon icon="align-left" variant="stroke" /> <LinkTitle>ARTICLES</LinkTitle>
+          </IconLink>
+
           <IconLink onClick={handleClick} title="Work" href="#work">
             <Icon icon="briefcase" variant="stroke" />{" "}
             <LinkTitle>WHAT I DO</LinkTitle>
