@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, memo } from "react";
 
 import Icon from "components/Icon";
 import Button from "components/Button";
@@ -7,7 +7,7 @@ import Typography from "components/Typography";
 import { ContentWrapper, Section } from "./styled.components";
 import SocialLinks from "components/SocialLinks";
 
-const LetsGetInTouchSection: React.FC = () => {
+const LetsGetInTouchSection: FC = () => {
   return (
     <Section id="contact">
       <Icon icon="mail-64" variant="stroke" highlighted />
@@ -33,4 +33,4 @@ const LetsGetInTouchSection: React.FC = () => {
   );
 };
 
-export default React.memo(LetsGetInTouchSection);
+export default memo(LetsGetInTouchSection);

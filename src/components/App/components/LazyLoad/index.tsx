@@ -1,8 +1,8 @@
-import React from "react";
+import { FC, Suspense } from "react";
 import Fallback from "./components/Fallback";
 
-const LazyLoad: React.FC = ({children}) => (
-  <React.Suspense fallback={<Fallback />}>{children}</React.Suspense>
+const LazyLoad: FC = ({ children }) => (
+  <Suspense fallback={<Fallback />}>{children}</Suspense>
 );
 
 export default LazyLoad;

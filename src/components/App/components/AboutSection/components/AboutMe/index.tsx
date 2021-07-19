@@ -1,8 +1,8 @@
+import { FC } from "react";
 import Typography from "components/Typography";
-import React from "react";
 import { AboutMeWrapper } from "./styled.components";
 
-const AboutMe: React.FC = () => (
+const AboutMe: FC = () => (
   <AboutMeWrapper>
     <h5>
       I’m <Typography variant="accent">Arbaz Ajaz</Typography>.

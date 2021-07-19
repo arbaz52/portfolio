@@ -1,10 +1,10 @@
-import React from "react";
+import { FC } from "react";
 
 import { IBoxProps } from "./types";
 
 import { BoxWrapper, ContentWrapper } from "./styled.components";
 
-const Box: React.FC<IBoxProps> = ({
+const Box: FC<IBoxProps> = ({
   icon,
   title,
   children,

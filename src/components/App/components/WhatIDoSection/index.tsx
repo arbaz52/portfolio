@@ -1,7 +1,8 @@
+import { FC, memo } from "react";
+
 import Box from "components/Box";
 import Icon from "components/Icon";
 import Typography from "components/Typography";
-import React from "react";
 
 import {
   Pill,
@@ -13,7 +14,7 @@ import {
   SingleColumnBoxesWrapper,
 } from "./styled.components";
 
-const WhatIDoSection: React.FC = () => {
+const WhatIDoSection: FC = () => {
   return (
     <Section id="work">
       <ContentWrapper>
@@ -72,4 +73,4 @@ const WhatIDoSection: React.FC = () => {
   );
 };
 
-export default React.memo(WhatIDoSection);
+export default memo(WhatIDoSection);

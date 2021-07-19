@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, memo } from "react";
 
 import Typography from "components/Typography";
 
@@ -17,7 +17,7 @@ import { IconLink } from "components/SocialLinks/styled.components";
 import { ButtonsWrapper } from "../HeroSection/styled.components";
 import Button from "components/Button";
 
-const ProjectsGallerySection: React.FC = () => {
+const ProjectsGallerySection: FC = () => {
   return (
     <Section id="gallery">
       <ContentWrapper>
@@ -106,4 +106,4 @@ const ProjectsGallerySection: React.FC = () => {
   );
 };
 
-export default React.memo(ProjectsGallerySection);
+export default memo(ProjectsGallerySection);

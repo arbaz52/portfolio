@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, useState, useCallback, memo, MouseEvent } from "react";
 
 import Icon from "components/Icon";
 
@@ -13,31 +13,28 @@ import {
   OpenNavigation,
 } from "./styled.components";
 
-const Navigation: React.FC = () => {
-  const [navigationOpen, setNavigationOpen] = React.useState(false);
+const Navigation: FC = () => {
+  const [navigationOpen, setNavigationOpen] = useState(false);
 
-  const toggleNavigation = React.useCallback(() => {
+  const toggleNavigation = useCallback(() => {
     setNavigationOpen((pv) => !pv);
   }, []);
 
-  const handleClick = React.useCallback(
-    (ev: React.MouseEvent<HTMLAnchorElement>) => {
-      ev.preventDefault();
-      const { href } = ev.currentTarget as HTMLAnchorElement;
-      try {
-        const el = document.getElementById(href.split("#")[1]);
-        console.log(el, href.slice(1));
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-          window.history.pushState({}, "", href);
-          setNavigationOpen(false);
-        }
-      } catch (ex) {
-        console.error(ex);
+  const handleClick = useCallback((ev: MouseEvent<HTMLAnchorElement>) => {
+    ev.preventDefault();
+    const { href } = ev.currentTarget as HTMLAnchorElement;
+    try {
+      const el = document.getElementById(href.split("#")[1]);
+      console.log(el, href.slice(1));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState({}, "", href);
+        setNavigationOpen(false);
       }
-    },
-    []
-  );
+    } catch (ex) {
+      console.error(ex);
+    }
+  }, []);
   return (
     <>
       <OpenNavigation
@@ -60,7 +57,8 @@ const Navigation: React.FC = () => {
           </IconLink>
 
           <IconLink onClick={handleClick} title="Articles" href="#articles">
-            <Icon icon="align-left" variant="stroke" /> <LinkTitle>ARTICLES</LinkTitle>
+            <Icon icon="align-left" variant="stroke" />{" "}
+            <LinkTitle>ARTICLES</LinkTitle>
           </IconLink>
 
           <IconLink onClick={handleClick} title="Work" href="#work">
@@ -101,4 +99,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default React.memo(Navigation);
+export default memo(Navigation);

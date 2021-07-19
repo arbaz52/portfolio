@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 
 import Icon from "components/Icon";
 
@@ -6,7 +6,7 @@ import { ISocialLinksProps } from "./types";
 
 import { IconLink, SocialLinksWrapper } from "./styled.components";
 
-const SocialLinks: React.FC<ISocialLinksProps> = ({ className, style }) => (
+const SocialLinks: FC<ISocialLinksProps> = ({ className, style }) => (
   <SocialLinksWrapper style={style} className={className}>
     <IconLink
       target="_blank"

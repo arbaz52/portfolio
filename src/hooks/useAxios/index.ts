@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 import axios from "axios";
 
@@ -7,11 +7,11 @@ export default function useAxios<T>(url: string): {
   data?: T;
   error?: Error;
 } {
-  const [data, setData] = React.useState<T>();
-  const [error, setError] = React.useState<Error>();
-  const [loading, setLoading] = React.useState(false);
+  const [data, setData] = useState<T>();
+  const [error, setError] = useState<Error>();
+  const [loading, setLoading] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     axios
       .get<T>(url)
       .catch((ex) => {

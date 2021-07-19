@@ -1,15 +1,15 @@
-import React from "react";
+import { FC, lazy, Suspense, memo } from "react";
 import { ISvgProps } from "./types";
 
-const Svg: React.FC<ISvgProps> = ({ icon, ...props }) => {
-  const Icon = React.lazy(() => import(`assets/svgs/${icon}.svg`));
+const Svg: FC<ISvgProps> = ({ icon, ...props }) => {
+  const Icon = lazy(() => import(`assets/svgs/${icon}.svg`));
   if (!Icon) return <></>;
 
   return (
-    <React.Suspense fallback={<></>}>
+    <Suspense fallback={<></>}>
       <Icon {...props} />
-    </React.Suspense>
+    </Suspense>
   );
 };
 
-export default React.memo(Svg);
+export default memo(Svg);

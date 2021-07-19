@@ -1,10 +1,11 @@
-import React from "react";
+import { FC, memo } from "react";
+
+import Icon from "components/Icon";
 
 import { IconWithText, Stripe } from "components/App/styled.components";
-import Icon from "components/Icon";
 import { ContentWrapper, TitleWithNumber } from "./styled.components";
 
-const RelatableContentStrip: React.FC = () => (
+const RelatableContentStrip: FC = () => (
   <Stripe id="relatable">
     <IconWithText>
       <Icon icon="hashtag" variant="stroke" highlighted />
@@ -37,4 +38,4 @@ const RelatableContentStrip: React.FC = () => (
   </Stripe>
 );
 
-export default React.memo(RelatableContentStrip);
+export default memo(RelatableContentStrip);

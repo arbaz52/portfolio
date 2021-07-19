@@ -1,10 +1,10 @@
-import React from "react";
+import { FC, memo } from "react";
 
 import { IconWithText } from "components/App/styled.components";
 import Icon from "components/Icon";
 import { ContentWrapper, Stripe } from "./styled.components";
 
-const WhatIUseStrip: React.FC = () => (
+const WhatIUseStrip: FC = () => (
   <Stripe id="using">
     <IconWithText>
       <Icon icon="heart" variant="stroke" highlighted />
@@ -38,4 +38,4 @@ const WhatIUseStrip: React.FC = () => (
   </Stripe>
 );
 
-export default React.memo(WhatIUseStrip);
+export default memo(WhatIUseStrip);

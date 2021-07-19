@@ -1,11 +1,11 @@
-import React from "react";
+import { FC, useContext } from "react";
 
 import Icon from "components/Icon";
 import ThemeContext from "contexts/ThemeContext";
 import { IconLink, LinkTitle } from "../../styled.components";
 
-const ThemeSwitcher: React.FC = () => {
-  const { theme, toggleTheme } = React.useContext(ThemeContext);
+const ThemeSwitcher: FC = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <IconLink onClick={toggleTheme}>
       <Icon
