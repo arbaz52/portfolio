@@ -1,5 +1,3 @@
-import "quill/dist/quill.snow.css";
-
 import { FC, useContext, useReducer, memo } from "react";
 
 import Box from "components/Box";
@@ -17,7 +15,6 @@ import {
   ContentWrapper,
 } from "../WhatIDoSection/styled.components";
 import {
-  HTMLPreviewer,
   LoadingWrapper as CenterWrapper,
   BoxContentWrapper,
   BoxesWrapperReplaceFractions,
@@ -61,14 +58,16 @@ const MySkillsAndExpertiseSection: FC = () => {
             <BoxesWrapperReplaceFractions>
               {articles
                 .slice(0, expand ? articles.length : 3)
-                .map(({ title, content, link }, index) => (
-                  <Box title={title} active={index === 0} key={title}>
+                .map(({ title, link, pubDate }, index) => (
+                  <Box
+                    title={title}
+                    subTitle={pubDate}
+                    active={index === 0}
+                    key={title}
+                  >
                     <BoxContentWrapper>
-                      <Typography variant="secondary">
-                        <HTMLPreviewer readOnly value={content} />
-                      </Typography>
                       <Link target="_blank" href={link}>
-                        Read more...
+                        Read Article on Medium...
                       </Link>
                     </BoxContentWrapper>
                   </Box>

@@ -1,19 +1,25 @@
 import { FC, lazy, useMemo, useReducer } from "react";
 
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+
 import { ThemeProvider } from "styled-components";
 
+import useAxios from "hooks/useAxios";
+
 import ThemeContext from "contexts/ThemeContext";
+import ArticlesContext from "contexts/ArticlesContext";
 
 import { lightTheme, darkTheme } from "assets/themes";
 
 import { TTheme } from "contexts/ThemeContext/types";
+import { IArticle, IArticlesContext } from "contexts/ArticlesContext/types";
+
+import { IRSSFeedData } from "./types";
+
+import LazyLoad from "./components/LazyLoad";
 
 import { CSSReset, Headings } from "./styled.components";
-import LazyLoad from "./components/LazyLoad";
-import { IRSSFeedData } from "./types";
-import { IArticle, IArticlesContext } from "contexts/ArticlesContext/types";
-import useAxios from "hooks/useAxios";
-import ArticlesContext from "contexts/ArticlesContext";
 
 const Navigation = lazy(() => import("./components/Navigation"));
 const HeroSection = lazy(() => import("./components/HeroSection"));
@@ -34,6 +40,8 @@ const MySkillsAndExpertiseSection = lazy(
   () => import("./components/MySkillsAndExpertiseSection")
 );
 
+dayjs.extend(relativeTime);
+
 const App: FC = () => {
   const [theme, toggleTheme] = useReducer(
     (_theme: TTheme) => (_theme === "Dark" ? "Light" : "Dark") as TTheme,
@@ -46,10 +54,10 @@ const App: FC = () => {
 
   const articles = useMemo<IArticle[]>(() => {
     return (
-      feedData?.items.map(({ title, link, description: content }) => ({
+      feedData?.items.map<IArticle>(({ title, link, pubDate }) => ({
         link,
         title,
-        content,
+        pubDate: dayjs(pubDate).fromNow(),
       })) ?? []
     );
   }, [feedData]);

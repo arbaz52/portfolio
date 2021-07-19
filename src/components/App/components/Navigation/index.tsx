@@ -25,7 +25,6 @@ const Navigation: FC = () => {
     const { href } = ev.currentTarget as HTMLAnchorElement;
     try {
       const el = document.getElementById(href.split("#")[1]);
-      console.log(el, href.slice(1));
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
         window.history.pushState({}, "", href);
