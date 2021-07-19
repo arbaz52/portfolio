@@ -1,6 +1,6 @@
+import { FC, memo } from "react";
 import Box from "components/Box";
 import Typography from "components/Typography";
-import React from "react";
 
 import {
   BoxesWrapper,
@@ -12,7 +12,7 @@ import {
   TextWrapper,
 } from "../WhatIDoSection/styled.components";
 
-const MySkillsAndExpertiseSection: React.FC = () => {
+const MySkillsAndExpertiseSection: FC = () => {
   return (
     <Section id="skills">
       <ContentWrapper>
@@ -74,4 +74,4 @@ const MySkillsAndExpertiseSection: React.FC = () => {
   );
 };
 
-export default React.memo(MySkillsAndExpertiseSection);
+export default memo(MySkillsAndExpertiseSection);

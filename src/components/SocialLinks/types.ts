@@ -1,4 +1,5 @@
+import { CSSProperties } from "react";
 export interface ISocialLinksProps {
-  style?: React.CSSProperties;
   className?: string;
+  style?: CSSProperties;
 }

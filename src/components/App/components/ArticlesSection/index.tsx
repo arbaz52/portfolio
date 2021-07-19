@@ -1,6 +1,6 @@
 import "quill/dist/quill.snow.css";
 
-import React from "react";
+import { FC, useContext, useReducer, memo } from "react";
 
 import Box from "components/Box";
 import Link from "components/Link";
@@ -24,10 +24,10 @@ import {
 } from "./styled.components";
 import { ButtonsWrapper } from "../HeroSection/styled.components";
 
-const MySkillsAndExpertiseSection: React.FC = () => {
-  const { articles, loading } = React.useContext(ArticlesContext);
+const MySkillsAndExpertiseSection: FC = () => {
+  const { articles, loading } = useContext(ArticlesContext);
 
-  const [expand, toggleExpand] = React.useReducer((state) => !state, false);
+  const [expand, toggleExpand] = useReducer((state) => !state, false);
 
   return (
     <Section id="articles">
@@ -88,4 +88,4 @@ const MySkillsAndExpertiseSection: React.FC = () => {
   );
 };
 
-export default React.memo(MySkillsAndExpertiseSection);
+export default memo(MySkillsAndExpertiseSection);

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, memo } from "react";
 
 import Button from "components/Button";
 
@@ -12,7 +12,7 @@ import {
 import SocialLinks from "components/SocialLinks";
 import Svg from "components/Svg";
 
-const HeroSection: React.FC = () => (
+const HeroSection: FC = () => (
   <Section id="hero">
     <span></span>
     <ContentWrapper>
@@ -55,4 +55,4 @@ const HeroSection: React.FC = () => (
   </Section>
 );
 
-export default React.memo(HeroSection);
+export default memo(HeroSection);

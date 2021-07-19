@@ -1,8 +1,8 @@
-import React from "react";
+import { CSSProperties } from "react";
 
 export interface ISvgProps {
   icon: string;
 
-  style?: React.CSSProperties;
   className?: string;
+  style?: CSSProperties;
 }

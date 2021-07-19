@@ -1,4 +1,4 @@
-import React from "react";
+import { createContext } from "react";
 import { IArticlesContext } from "./types";
 
 const defaultValue: IArticlesContext = {
@@ -6,6 +6,6 @@ const defaultValue: IArticlesContext = {
   loading: false,
 };
 
-const ArticlesContext = React.createContext(defaultValue);
+const ArticlesContext = createContext(defaultValue);
 
 export default ArticlesContext;

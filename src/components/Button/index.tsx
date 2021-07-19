@@ -1,16 +1,16 @@
-import React from "react";
+import { FC } from "react";
 
 import { Button as ButtonEl, Icon } from "./styled.components";
 
 import { IButtonProps } from "./types";
 
-const Button: React.FC<IButtonProps> = ({
-  children,
-  prefix,
-  suffix,
+const Button: FC<IButtonProps> = ({
   as,
   href,
+  prefix,
+  suffix,
   target,
+  children,
   download,
   ...props
 }) => {

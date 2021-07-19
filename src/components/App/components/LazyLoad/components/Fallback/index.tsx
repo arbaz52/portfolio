@@ -1,10 +1,10 @@
-import React from "react";
+import { FC } from "react";
 
 import Dots from "./components/Dots";
 
 import { FallbackWrapper } from "./styled.components";
 
-const Fallback: React.FC = () => (
+const Fallback: FC = () => (
   <FallbackWrapper>
     <Dots />
   </FallbackWrapper>

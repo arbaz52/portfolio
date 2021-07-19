@@ -1,9 +1,9 @@
+import { FC } from "react";
 import Svg from "components/Svg";
-import React from "react";
 
 import { PortraitAndLinksWrapper, SocialLinks } from "./styled.components";
 
-const PortraitAndLinks: React.FC = () => (
+const PortraitAndLinks: FC = () => (
   <PortraitAndLinksWrapper>
     <Svg icon="portrait" />
     <SocialLinks />

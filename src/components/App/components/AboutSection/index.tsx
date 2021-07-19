@@ -1,11 +1,11 @@
-import React from "react";
+import { FC, memo } from "react";
 
 import AboutMe from "./components/AboutMe";
 import PortraitAndLinks from "./components/PortraitAndLinks";
 
 import { Section } from "./styled.components";
 
-const AboutSection: React.FC = () => {
+const AboutSection: FC = () => {
   return (
     <Section id="about">
       <PortraitAndLinks />
@@ -14,4 +14,4 @@ const AboutSection: React.FC = () => {
   );
 };
 
-export default React.memo(AboutSection);
+export default memo(AboutSection);
