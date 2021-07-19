@@ -1,9 +1,10 @@
 import { ReactNode, CSSProperties } from "react";
 export interface IBoxProps {
-  icon?: ReactNode;
   title: string;
-  active?: boolean;
 
-  style?: CSSProperties;
+  icon?: ReactNode;
+  active?: boolean;
+  subTitle?: string;
   className?: string;
+  style?: CSSProperties;
 }

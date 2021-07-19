@@ -24,7 +24,6 @@ export const Button = styled.button<IButtonProps>`
   ${(props) => {
     switch (props.size) {
       case "small":
-        console.log("SMLALL");
         return css`
           font-size: 0.875rem;
           line-height: 16px;
@@ -64,7 +63,6 @@ export const Button = styled.button<IButtonProps>`
   color: ${(props) => props.contentColor};
 
   @media only screen and (max-width: ${breakpoints.md}) {
-
     text-transform: uppercase;
     padding: 8px 16px;
     letter-spacing: 1px;

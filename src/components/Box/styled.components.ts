@@ -1,6 +1,9 @@
 import styled from "assets/themes";
 import breakpoints from "assets/themes/breakpoints";
 
+export const SubTitle = styled.small`
+  margin-bottom: -14px;
+`;
 export const BoxWrapper = styled.div`
   gap: 16px;
   padding: 16px;
